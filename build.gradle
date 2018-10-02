@@ -1,0 +1,25 @@
+// Copyright 2018 Ricoh Company, Ltd. All rights reserved.
+
+buildscript {
+    ext.kotlin_version = '1.2.61'
+    ext.libwebrtc_version = '1.0.24064'
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.4'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
